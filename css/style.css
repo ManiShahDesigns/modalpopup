@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f2f6;
+}
+
+.text-box,
+.modal-box {
+  max-width: 300px;
+  margin: 120px auto;
+  padding: 50px;
+  line-height: 25px;
+  font-size: 20px;
+  border-radius: 2px;
+}
+
+.text-box {
+  border: 5px solid #2f3542;
+}
+
+.modal-box {
+  border: 5px solid #2ed573;
+  background-color: white;
+  transition: all 250ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+a {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #1e90ff;
+  color: #f1f2f6;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 1px solid white;
+  transition: background-color 500ms;
+}
+
+a:hover,
+a:focus {
+  background-color: #70a1ff;
+}
+
+.modal {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.show-modal {
+  background-color: rgba(0, 0, 0, 0.45);
+  visibility: visible;
+  transition: all 500ms;
+}
+
+.show-modal .modal-box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.show-modal .fa-times {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .text-box,
+  .modal-box {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-box,
+  .modal-box {
+    max-width: 720px;
+  }
+}
